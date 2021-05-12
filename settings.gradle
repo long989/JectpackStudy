@@ -1,0 +1,3 @@
+include ':MyHttpLibrary'
+include ':app'
+rootProject.name = "QklJetpackMVVM"

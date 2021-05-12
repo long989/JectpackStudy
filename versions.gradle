@@ -1,0 +1,311 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+def versions = [:]
+versions.kotlin = "1.3.50"
+versions.stetho = "1.5.0"
+versions.facebook = "4.33.0"
+versions.support = "27.1.1"
+versions.okhttp3 = "3.14.1"
+versions.life_runtime = "1.1.0"
+versions.lifecycle_version = "2.1.0"
+versions.room = "2.2.1"
+versions.logger = "1.15"
+versions.dagger = "2.11"
+versions.junit = "4.12"
+versions.espresso = "3.0.1"
+versions.retrofit = "2.4.0"
+versions.glide = "4.8.0"
+versions.timber = "4.5.1"
+versions.android_gradle_plugin = "3.0.1"
+versions.rxjava2 = "2.1.6"
+versions.rx_android = "2.0.1"
+versions.rxbinding = "0.4.0"
+versions.rxbinding3 = "3.0.0-alpha2"
+versions.atsl_runner = "1.0.1"
+versions.atsl_rules = "1.0.1"
+versions.hamcrest = "1.3"
+versions.paging = "1.0.0-alpha3"
+versions.multidex = "2.0.1"
+versions.leakcanary_android = "1.4-beta2"
+//push
+versions.huaweipush = "2.6.3.301"
+//tinker
+versions.tinker = "1.9.14.3"
+//walle
+versions.walle = "1.1.6"
+versions.umeng = "6.1.4"
+//x5
+versions.tbs = "43697"
+
+//other
+versions.arouter_api = "1.5.0"
+versions.arouter_compiler = "1.2.2"
+versions.arouter_register = "1.0.2"
+versions.appsflyer = "4.10.2@aar"
+versions.fresco = "1.13.0"
+versions.picasso = "2.5.2"
+versions.swipelayout = "1.2.0"
+versions.lottie = "2.5.1"
+versions.fastjson = "1.2.39"
+versions.greendao = "3.2.2"
+versions.eventbus = "3.1.1"
+versions.jsoup = "1.9.2"
+versions.exoplayer = "2.7.1"
+versions.gson = "2.8.4"
+versions.crashlytics = "2.9.6@aar"
+versions.rxpermissions = "0.10.2@aar"
+versions.flexbox = "2.0.0"
+versions.rebound = "0.3.8"
+versions.seismic = "1.0.2"
+versions.guava = "24.1-android"
+versions.smartrefresh = "1.1.0"
+versions.lang3 = "3.7"
+versions.swipebackhelper = "3.1.2"
+versions.stickyheadersrecyclerview = "0.4.3"
+versions.photodraweeview = "1.1.3"
+versions.stream = "1.1.9"
+//
+versions.convenientbanner = "2.0.5"
+versions.quicksidebar = "1.0.3"
+versions.view_pager_transforms = "1.2.32@aar"
+versions.readmoretextview = "2.0.1"
+versions.zxing = "2.1"
+versions.switchbutton = "1.4.6"
+versions.isoparser = "1.1.22"
+versions.sldinglayout = "0.9.0"
+versions.topsnackbar = "1.1.1"
+versions.statusbarutil = "1.5.1"
+versions.gif = "1.0.1-SNAPSHOT"
+versions.installreferrer = "1.0"
+versions.advrecyclerview = "0.11.0@aar"
+versions.growingioautotrack = "2.8.4@aar"
+versions.growingiogtouch = "0.3.2"
+versions.growingiohwpush = "0.3.2"
+versions.growingioxmpush = "0.3.2"
+
+versions.doraemonkit = "1.2.1"
+
+versions.verticaltablayout = "1.2.5"
+versions.easypermissions = "1.2.0"
+//android x
+versions.x_support = '1.0.0'
+
+versions.x_arch = "2.1.0"
+
+versions.x_constraint = "1.1.3"
+versions.baseRecyclerViewAdapterHelper = "3.0.4"
+versions.shadowLayout = "3.1.8"
+versions.pinnedSectionItemDecoration = "1.3.2"
+
+versions.alicloud_hotfix = "3.2.18"
+
+def deps = [:]
+
+def androidx = [:]
+
+androidx.annotations = "androidx.annotation:annotation:1.1.0"
+androidx.app_compat = "androidx.appcompat:appcompat:1.1.0"
+androidx.recyclerview = "androidx.recyclerview:recyclerview:$versions.x_support"
+androidx.cardview = "androidx.cardview:cardview:$versions.x_support"
+androidx.v4 = "androidx.legacy:legacy-support-v4:$versions.x_support"
+androidx.core_utils = "androidx.legacy:legacy-support-core-utils:$versions.x_support"
+androidx.palette = "androidx.palette:palette:$versions.x_support"
+androidx.gridlayout = "androidx.gridlayout:gridlayout:$versions.x_support"
+androidx.exifinterface = "androidx.exifinterface:exifinterface:$versions.x_support"
+androidx.emoji = "androidx.emoji:emoji:$versions.x_support"
+androidx.v13 = "androidx.legacy:legacy-support-v13:$versions.x_support"
+androidx.core_ui = "androidx.legacy:legacy-support-core-ui:$versions.x_support"
+
+androidx.ktx = "androidx.core:core-ktx:1.1.0"
+androidx.design = "com.google.android.material:material:1.0.0"
+deps.androidx = androidx
+
+def lifecycle = [:]
+lifecycle.runtime = "androidx.lifecycle:runtime:$versions.lifecycle_version"
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version"
+lifecycle.java8 = "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle_version"
+lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version"
+lifecycle.lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel:$versions.lifecycle_version"
+deps.lifecycle = lifecycle
+
+def room = [:]
+room.runtime = "androidx.room:room-runtime:$versions.room"
+room.compiler = "androidx.room:room-compiler:$versions.room"
+room.common = "androidx.room:room-common:$versions.room"
+room.rxjava2 = "androidx.room:room-rxjava2:$versions.room"
+deps.room = room
+
+def arch_core = [:]
+arch_core.testing = "androidx.arch.core:$versions.x_arch"
+arch_core.core_common = "androidx.arch.core:core-common:$versions.x_arch"
+arch_core.core_core = "androidx.arch.core:core:$versions.x_arch"
+arch_core.core_runtime = "androidx.arch.core:runtime:$versions.x_arch"
+deps.arch_core = arch_core
+
+def retrofit = [:]
+retrofit.base = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.rxjava = "com.squareup.retrofit2:adapter-rxjava:$versions.retrofit"
+deps.retrofit = retrofit
+
+
+def stetho = [:]
+stetho.base = "com.facebook.stetho:stetho:$versions.stetho"
+stetho.support_okhttp3 = "com.facebook.stetho:stetho-okhttp3:$versions.stetho"
+stetho.empty_base_for_release = "net.igenius:stetho-no-op:1.1"
+deps.stetho = stetho
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+deps.dagger = dagger
+
+def espresso = [:]
+espresso.core = "com.android.support.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "com.android.support.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "com.android.support.test.espresso:espresso-intents:$versions.espresso"
+deps.espresso = espresso
+
+def atsl = [:]
+atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"
+atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
+deps.atsl = atsl
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+deps.kotlin = kotlin
+
+def okhttp3 = [:]
+okhttp3.okhttp = "com.squareup.okhttp3:okhttp:$versions.okhttp3"
+okhttp3.interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3"
+deps.okhttp3 = okhttp3
+
+def leakcanary = [:]
+leakcanary.debug = "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary_android"
+leakcanary.release = "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leakcanary_android"
+leakcanary.release = "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leakcanary_android"
+deps.leakcanary = leakcanary
+
+deps.paging = "android.arch.paging:runtime:$versions.paging"
+deps.multidex = "androidx.multidex:multidex:$versions.multidex"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.constraint_layout = "androidx.constraintlayout:constraintlayout:$versions.x_constraint"
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+deps.junit = "junit:junit:$versions.junit"
+
+deps.rxjava = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+deps.hamcrest = "org.hamcrest:hamcrest-all:$versions.hamcrest"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+
+def arouter = [:]
+arouter.api = "com.alibaba:arouter-api:$versions.arouter_api"
+arouter.compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+arouter.register = "com.alibaba:arouter-register:$versions.arouter_register"
+deps.arouter = arouter
+
+def facebook = [:]
+facebook.rebound = "com.facebook.rebound:rebound:$versions.rebound"
+deps.facebook = facebook
+
+def fresco = [:]
+fresco.base = "com.facebook.fresco:fresco:$versions.fresco"
+fresco.imagepipeline = "com.facebook.fresco:imagepipeline-okhttp3:$versions.fresco"
+fresco.animated_webp = "com.facebook.fresco:animated-webp:$versions.fresco"
+fresco.webpsupport = "com.facebook.fresco:webpsupport:$versions.fresco"
+fresco.animated_gif = "com.facebook.fresco:animated-gif:$versions.fresco"
+deps.fresco = fresco
+
+def push = [:]
+push.huawei = "com.huawei.android.hms:push:$versions.huaweipush"
+push.huawei_base = "com.huawei.android.hms:base:$versions.huaweipush"
+deps.push = push
+
+def smartrefresh = [:]
+smartrefresh.base = "com.scwang.smartrefresh:SmartRefreshLayout:$versions.smartrefresh"
+smartrefresh.header = "com.scwang.smartrefresh:SmartRefreshHeader:$versions.smartrefresh"
+deps.smartrefresh = smartrefresh
+
+def walle = [:]
+walle.plugin = "com.meituan.android.walle:plugin:$versions.walle"
+walle.library = "com.meituan.android.walle:library:$versions.walle"
+deps.walle = walle
+
+def tinker = [:]
+tinker.lib = "com.tencent.tinker:tinker-android-lib:$versions.tinker"
+tinker.anno = "com.tencent.tinker:tinker-android-anno:$versions.tinker"
+tinker.plugin = "com.tencent.tinker:tinker-patch-gradle-plugin:$versions.tinker"
+deps.tinker = tinker
+
+def tencent = [:]
+tencent.opensdk = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.4"
+deps.tencent = tencent
+
+def umeng = [:]
+umeng.analytics = "com.umeng.analytics:analytics:$versions.umeng"
+deps.umeng = umeng
+
+def alicloud = [:]
+alicloud.hotfix = "com.aliyun.ams:alicloud-android-hotfix:$versions.alicloud_hotfix"
+deps.alicloud = alicloud
+
+deps.appsflyer = "com.appsflyer:af-android-sdk:$versions.appsflyer"
+deps.swipelayout = "com.daimajia.swipelayout:library:$versions.swipelayout"
+deps.lottie = "com.airbnb.android:lottie:$versions.lottie"
+deps.fastjson = "com.alibaba:fastjson:$versions.fastjson"
+deps.greendao = "org.greenrobot:greendao:$versions.greendao"
+deps.eventbus = "org.greenrobot:eventbus:$versions.eventbus"
+deps.jsoup = "org.jsoup:jsoup:$versions.jsoup"
+deps.exoplayer = "com.google.android.exoplayer:exoplayer:$versions.exoplayer"
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.crashlytics = "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics"
+deps.flexbox = "com.google.android:flexbox:$versions.flexbox"
+deps.wechat = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+"
+deps.picasso = "com.squareup.picasso:picasso:$versions.picasso"
+deps.seismic = "com.squareup:seismic:$versions.seismic"
+deps.rxbinding = "com.jakewharton.rxbinding3:rxbinding:$versions.rxbinding"
+deps.rxbinding3 = "com.jakewharton.rxbinding3:rxbinding:$versions.rxbinding3"
+deps.guava = "com.google.guava:guava:$versions.guava"
+deps.rxpermissions = "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
+deps.lang3 = "org.apache.commons:commons-lang3:$versions.lang3"
+deps.swipebackhelper = "com.jude:swipebackhelper:$versions.swipebackhelper"
+deps.stickyheadersrecyclerview = "com.timehop.stickyheadersrecyclerview:library:$versions.stickyheadersrecyclerview"
+deps.photodraweeview = "me.relex:photodraweeview:$versions.photodraweeview"
+deps.stream = "com.annimon:stream:$versions.stream"
+deps.tbs = "com.tencent.tbs.tbssdk:sdk:$versions.tbs"
+
+////////////////
+deps.convenientbanner = "com.bigkoo:convenientbanner:$versions.convenientbanner"
+deps.view_pager_transforms = "com.ToxicBakery.viewpager.transforms:view-pager-transforms:$versions.view_pager_transforms"
+deps.readmoretextview = "com.borjabravo:readmoretextview:$versions.readmoretextview"
+deps.zxing = "cn.yipianfengye.android:zxing-library:$versions.zxing"
+deps.switchbutton = "com.kyleduo.switchbutton:library:$versions.switchbutton"
+deps.isoparser = "com.googlecode.mp4parser:isoparser:$versions.isoparser"
+deps.topsnackbar = "com.androidadvance:topsnackbar:$versions.topsnackbar"
+deps.quicksidebar = "com.bigkoo:quicksidebar:$versions.quicksidebar"
+deps.sldinglayout = "homhomlin.lib:sldinglayout:$versions.sldinglayout"
+deps.statusbarutil = "com.jaeger.statusbarutil:library:$versions.statusbarutil"
+deps.gif = "com.github.humorousz:FrameSequenceDrawable:$versions.gif"
+deps.installreferrer = "com.android.installreferrer:installreferrer:$versions.installreferrer"
+deps.advrecyclerview = "com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:$versions.advrecyclerview"
+
+deps.easypermissions = "pub.devrel:easypermissions:$versions.easypermissions"
+deps.verticaltablayout = "q.rorbin:VerticalTabLayout:$versions.verticaltablayout"
+deps.baseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.baseRecyclerViewAdapterHelper"
+deps.shadowLayout = "com.github.lihangleo2:ShadowLayout:$versions.shadowLayout"
+
+deps.pinnedSectionItemDecoration = "com.oushangfeng:PinnedSectionItemDecoration:$versions.pinnedSectionItemDecoration"
+//腾讯bugly
+deps.bugly = "com.tencent.bugly:crashreport:latest.release"
+
+ext.deps = deps
