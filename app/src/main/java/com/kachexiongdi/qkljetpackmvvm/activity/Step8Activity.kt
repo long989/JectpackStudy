@@ -1,12 +1,9 @@
 package com.kachexiongdi.qkljetpackmvvm.activity
 
-import com.kachexiongdi.qkljetpackmvvm.db.StudentDao
-import com.kachexiongdi.qkljetpackmvvm.db.StudentDatabase2
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.kachexiongdi.qkljetpackmvvm.adapter.Step8Adapter
 import com.kachexiongdi.qkljetpackmvvm.databinding.ActivityStepEighthBinding
 import com.kachexiongdi.qkljetpackmvvm.db.Student

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_step9_nav"
+    app:startDestination="@id/step9HomeFragment">
+
+    <fragment
+        android:id="@+id/step9HomeFragment"
+        android:name="com.kachexiongdi.qkljetpackmvvm.fragment.Step9HomeFragment"
+        android:label="Step9HomeFragment" >
+        <action
+            android:id="@+id/action_step9HomeFragment_to_step9DetailFragment"
+            app:destination="@id/step9DetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/step9DetailFragment"
+        android:name="com.kachexiongdi.qkljetpackmvvm.fragment.Step9DetailFragment"
+        android:label="Step9DetailFragment" >
+        <action
+            android:id="@+id/action_step9DetailFragment_to_step9HomeFragment"
+            app:destination="@id/step9HomeFragment" />
+    </fragment>
+</navigation>
