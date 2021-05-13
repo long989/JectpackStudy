@@ -30,6 +30,7 @@ class Step9Activity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
+    //这个方法的作用就是从A页面跳转到B页面，B页面点击返回按钮时回退到A页面
     override fun onSupportNavigateUp(): Boolean {
         val navController = Navigation.findNavController(this, R.id.fragment)
         return navController.navigateUp()

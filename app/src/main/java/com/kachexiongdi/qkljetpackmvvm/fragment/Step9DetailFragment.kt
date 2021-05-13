@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import com.kachexiongdi.qkljetpackmvvm.R
 import com.kachexiongdi.qkljetpackmvvm.databinding.FragmentStep9DetailBinding
 import com.kachexiongdi.qkljetpackmvvm.databinding.FragmentStep9HomeBinding
 
@@ -13,7 +15,7 @@ import com.kachexiongdi.qkljetpackmvvm.databinding.FragmentStep9HomeBinding
  *   date   : 2021/5/12  6:30 下午
  *   desc   :
  */
-class Step9DetailFragment :Fragment(){
+class Step9DetailFragment : Fragment() {
     private lateinit var viewBinding: FragmentStep9DetailBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,8 +32,11 @@ class Step9DetailFragment :Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        val args = Step9HomeFragmentArgs.fromBundle(requireArguments())
+        viewBinding.tvContent.text = "${args.userName},${args.age}"
         viewBinding.button1.setOnClickListener {
-
+            val navController = Navigation.findNavController(it)
+            navController.navigate(R.id.action_step9DetailFragment_to_step9HomeFragment)
         }
     }
 }

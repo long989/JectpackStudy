@@ -11,6 +11,14 @@
         <action
             android:id="@+id/action_step9HomeFragment_to_step9DetailFragment"
             app:destination="@id/step9DetailFragment" />
+        <argument
+            android:name="userName"
+            android:defaultValue="liudehua"
+            app:argType="string"/>
+        <argument
+            android:name="age"
+            android:defaultValue="60"
+            app:argType="integer"/>
     </fragment>
     <fragment
         android:id="@+id/step9DetailFragment"

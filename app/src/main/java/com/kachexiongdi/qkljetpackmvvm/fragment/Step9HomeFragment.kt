@@ -32,8 +32,13 @@ class Step9HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewBinding.button1.setOnClickListener {
+            val args = Step9HomeFragmentArgs
+                .Builder()
+                .setUserName("鲁班")
+                .setAge(18)
+                .build().toBundle()
             val navController = Navigation.findNavController(it)
-            navController.navigate(R.id.action_step9HomeFragment_to_step9DetailFragment)
+            navController.navigate(R.id.action_step9HomeFragment_to_step9DetailFragment,args)
         }
     }
 }
