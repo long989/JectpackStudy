@@ -75,4 +75,10 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("type", "step6")
         startActivity(intent)
     }
+
+    fun startStep11(view: View) {
+        val intent = Intent(this, Step10Activity::class.java)
+        intent.putExtra("type", "step6")
+        startActivity(intent)
+    }
 }

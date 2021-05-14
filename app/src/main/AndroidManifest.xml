@@ -30,6 +30,7 @@
         <activity android:name=".activity.Step7Activity" />
         <activity android:name=".activity.Step8Activity" />
         <activity android:name=".activity.Step9Activity" />
+        <activity android:name=".activity.Step10Activity" />
 
         <service android:name=".location.MyLocationService" />
     </application>

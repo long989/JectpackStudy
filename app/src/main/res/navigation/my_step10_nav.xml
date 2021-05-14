@@ -16,11 +16,11 @@
         <argument
             android:name="userName"
             android:defaultValue="liudehua"
-            app:argType="string"/>
+            app:argType="string" />
         <argument
             android:name="age"
             android:defaultValue="60"
-            app:argType="integer"/>
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/step9DetailFragment"
@@ -31,4 +31,9 @@
             android:id="@+id/action_step9DetailFragment_to_step9HomeFragment"
             app:destination="@id/step9HomeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kachexiongdi.qkljetpackmvvm.fragment.SettingsFragment"
+        android:label="SettingsFragment" />
+
 </navigation>

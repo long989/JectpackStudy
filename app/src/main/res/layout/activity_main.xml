@@ -118,10 +118,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="startStep10"
-            android:text="navigat"
+            android:text="navigation"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startStep11"
+            android:text="navigation2-menu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
